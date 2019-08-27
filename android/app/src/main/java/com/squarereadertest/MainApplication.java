@@ -10,6 +10,7 @@ import com.facebook.react.ReactApplication;
 import com.facebook.react.ReactNativeHost;
 import com.facebook.react.ReactPackage;
 import com.facebook.soloader.SoLoader;
+import com.squareup.sdk.reader.ReaderSdk;
 
 import java.util.List;
 
@@ -44,6 +45,7 @@ public class MainApplication extends Application implements ReactApplication {
   @Override
   public void onCreate() {
     super.onCreate();
+    ReaderSdk.initialize(this);
     SoLoader.init(this, /* native exopackage */ false);
   }
 }
